@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>CALCULATOR</title>
+  </head>
+  <body>
+    <section class="w-96 block mx-auto my-32">
+      <div id="input-section">
+        <input
+          class="w-full p-8 bg-slate-300 font-bold rtl mb-2 rounded-full"
+          type="text"
+          id="input"
+        />
+      </div>
+      <div
+        id="buttons"
+        class="w-full text-slate-200 grid grid-rows-5 h-80 gap-2"
+      >
+        <div class="grid grid-cols-4 gap-2">
+          <button
+            class="bg-gray-500 text-black font-bold"
+            onclick="clearScreen()"
+          >
+            AC
+          </button>
+          <button
+            class="bg-gray-500 text-black font-bold"
+            onclick="operator(this)"
+            value="-/+"
+          >
+            +/-
+          </button>
+          <button
+            class="bg-gray-500 text-black font-bold"
+            onclick="operator(this)"
+            value="%"
+          >
+            %
+          </button>
+          <button
+            class="bg-orange-500 font-bold"
+            onclick="operator(this)"
+            value="/"
+          >
+            /
+          </button>
+        </div>
+        <div class="grid grid-cols-4 gap-2">
+          <button onclick="input(this)" value="7">7</button>
+          <button onclick="input(this)" value="8">8</button>
+          <button onclick="input(this)" value="9">9</button>
+          <button
+            class="bg-orange-500 font-bold"
+            onclick="operator(this)"
+            value="*"
+          >
+            x
+          </button>
+        </div>
+        <div class="grid grid-cols-4 gap-2">
+          <button onclick="input(this)" value="4">4</button>
+          <button onclick="input(this)" value="5">5</button>
+          <button onclick="input(this)" value="6">6</button>
+          <button
+            class="bg-orange-500 font-bold"
+            onclick="operator(this)"
+            value="-"
+          >
+            -
+          </button>
+        </div>
+        <div class="grid grid-cols-4 gap-2">
+          <button onclick="input(this)" value="1">1</button>
+          <button onclick="input(this)" value="2">2</button>
+          <button onclick="input(this)" value="3">3</button>
+          <button
+            class="bg-orange-500 font-bold"
+            onclick="operator(this)"
+            value="+"
+          >
+            +
+          </button>
+        </div>
+        <div class="grid grid-cols-4 gap-2">
+          <button class="col-span-2" onclick="input(this)" value="0">0</button>
+          <button onclick="input(this)" value=".">.</button>
+          <button class="bg-orange-500 font-bold" id="calculate" value="=">
+            =
+          </button>
+        </div>
+      </div>
+    </section>
+    <div class="text-white font-light fixed left-96 ms-72 bottom-4 w-spacing">
+      <p>
+        <b
+          >Made with
+          <i class="fa fa-heart text-orange-500"></i>
+          by Abdul Basit</b
+        >
+      </p>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

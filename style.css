@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgb(23, 22, 22);
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.w-spacing {
+  word-spacing: 0.2rem;
+}
