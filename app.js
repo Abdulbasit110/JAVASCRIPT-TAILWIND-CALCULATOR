@@ -57,7 +57,7 @@ const operator = (obj) => {
           "click",
           (event) => {
             const num2 = Number(screen.value);
-            //! activating  ""=" to  calculate the result
+            //! activating  "=" to  calculate the result
             const equal = document.getElementById(`calculate`);
             //! generating click function
             equal.addEventListener(
